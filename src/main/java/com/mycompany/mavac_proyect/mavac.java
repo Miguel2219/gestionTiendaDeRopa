@@ -4,7 +4,12 @@
  */
 package com.mycompany.mavac_proyect;
 
-import com.company.views.Principal;
+import com.mycompany.views.Compras;
+import com.mycompany.views.Devoluciones;
+import com.mycompany.views.Principal;
+import com.mycompany.views.Productos;
+import com.mycompany.views.Reportes;
+import com.mycompany.views.Usuarios;
 import com.formdev.flatlaf.FlatLightLaf;
 import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatMaterialLighterIJTheme;
 import java.awt.Color;
@@ -34,8 +39,8 @@ public class mavac extends javax.swing.JFrame {
     private void initContent() {
         ShowJPanel(new Principal());
     }
-    private void ShowJPanel(JPanel p){
-        p.setSize(750,430);
+    public static void ShowJPanel(JPanel p){
+        p.setSize(750,440);
         p.setLocation(0,0);
         
         content.removeAll();
@@ -224,7 +229,7 @@ public class mavac extends javax.swing.JFrame {
                 .addGroup(headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(dateTxt)
                     .addComponent(navTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(447, Short.MAX_VALUE))
         );
         headerLayout.setVerticalGroup(
             headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -233,7 +238,7 @@ public class mavac extends javax.swing.JFrame {
                 .addComponent(navTxt)
                 .addGap(35, 35, 35)
                 .addComponent(dateTxt)
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         content.setBackground(new java.awt.Color(255, 255, 255));
@@ -242,11 +247,11 @@ public class mavac extends javax.swing.JFrame {
         content.setLayout(contentLayout);
         contentLayout.setHorizontalGroup(
             contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 744, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         contentLayout.setVerticalGroup(
             contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 419, Short.MAX_VALUE)
+            .addGap(0, 440, Short.MAX_VALUE)
         );
 
         mensaje.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -260,13 +265,11 @@ public class mavac extends javax.swing.JFrame {
                 .addComponent(menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(backgroundLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(content, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(header, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(backgroundLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(mensaje, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                        .addGap(12, 12, 12)
+                        .addComponent(mensaje, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(content, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(header, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         backgroundLayout.setVerticalGroup(
             backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -275,9 +278,9 @@ public class mavac extends javax.swing.JFrame {
                 .addGap(20, 20, 20)
                 .addComponent(mensaje, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(header, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(content, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(header, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(1, 1, 1)
+                .addComponent(content, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -296,27 +299,28 @@ public class mavac extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_reportesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_reportesActionPerformed
-        // TODO add your handling code here:
+        ShowJPanel (new Reportes());
     }//GEN-LAST:event_btn_reportesActionPerformed
 
     private void btn_principalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_principalActionPerformed
-        // TODO add your handling code here:
+        ShowJPanel (new Principal());
     }//GEN-LAST:event_btn_principalActionPerformed
 
     private void btn_devolucionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_devolucionesActionPerformed
-        // TODO add your handling code here:
+        ShowJPanel (new Devoluciones());
     }//GEN-LAST:event_btn_devolucionesActionPerformed
 
     private void btn_usuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_usuariosActionPerformed
-        // TODO add your handling code here:
+        ShowJPanel (new Usuarios());
     }//GEN-LAST:event_btn_usuariosActionPerformed
 
     private void btn_productosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_productosActionPerformed
-        // TODO add your handling code here:
+        ShowJPanel (new Productos());
     }//GEN-LAST:event_btn_productosActionPerformed
 
     private void btn_comprasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_comprasActionPerformed
-        // TODO add your handling code here:
+        ShowJPanel (new Compras());
+
     }//GEN-LAST:event_btn_comprasActionPerformed
 
     /**
@@ -365,7 +369,7 @@ public class mavac extends javax.swing.JFrame {
     private javax.swing.JButton btn_productos;
     private javax.swing.JButton btn_reportes;
     private javax.swing.JButton btn_usuarios;
-    private javax.swing.JPanel content;
+    private static javax.swing.JPanel content;
     private javax.swing.JLabel dateTxt;
     private javax.swing.JPanel header;
     private javax.swing.JSeparator jSeparator1;

@@ -44,17 +44,17 @@
               <Group type="102" attributes="0">
                   <EmptySpace min="43" pref="43" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="tittletTxt" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel4" min="-2" pref="650" max="-2" attributes="0"/>
-                      <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                      <Component id="Titulo" min="-2" max="-2" attributes="0"/>
+                      <Component id="nav1Txt" min="-2" max="-2" attributes="0"/>
+                      <Component id="nav2Txt" min="-2" max="-2" attributes="0"/>
+                      <Component id="toolTxt" min="-2" pref="650" max="-2" attributes="0"/>
+                      <Component id="inventarioTxt" min="-2" max="-2" attributes="0"/>
+                      <Component id="ventasTxt" min="-2" max="-2" attributes="0"/>
+                      <Component id="devolucionesTxt" min="-2" max="-2" attributes="0"/>
+                      <Component id="registroTxt" min="-2" max="-2" attributes="0"/>
+                      <Component id="edicionTxt" min="-2" max="-2" attributes="0"/>
+                      <Component id="reportesTxt" min="-2" max="-2" attributes="0"/>
+                      <Component id="seccionTxt" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -63,83 +63,83 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace min="34" pref="34" max="-2" attributes="0"/>
-                  <Component id="tittletTxt" min="-2" max="-2" attributes="0"/>
+                  <Component id="Titulo" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                  <Component id="nav1Txt" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                  <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                  <Component id="nav2Txt" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="41" pref="41" max="-2" attributes="0"/>
-                  <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                  <Component id="toolTxt" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
-                  <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                  <Component id="inventarioTxt" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                  <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                  <Component id="ventasTxt" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                  <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                  <Component id="devolucionesTxt" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                  <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+                  <Component id="registroTxt" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                  <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                  <Component id="edicionTxt" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                  <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                  <Component id="reportesTxt" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                  <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                  <Component id="seccionTxt" min="-2" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="tittletTxt">
+        <Component class="javax.swing.JLabel" name="Titulo">
           <Properties>
             <Property name="text" type="java.lang.String" value="Bienvenido"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel2">
+        <Component class="javax.swing.JLabel" name="nav1Txt">
           <Properties>
             <Property name="text" type="java.lang.String" value="Sistema de Gestion para Tienda de Ropa Deportiva. Control y administracion optima y eficiente de inventario, ventas"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel3">
+        <Component class="javax.swing.JLabel" name="nav2Txt">
           <Properties>
             <Property name="text" type="java.lang.String" value="y devoluciones."/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel4">
+        <Component class="javax.swing.JLabel" name="toolTxt">
           <Properties>
             <Property name="text" type="java.lang.String" value="Esta herramienta permitira llevar un control completo y detallado de mavac, con acceso a funciones especificas como:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel5">
+        <Component class="javax.swing.JLabel" name="inventarioTxt">
           <Properties>
             <Property name="text" type="java.lang.String" value="Inventario"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel6">
+        <Component class="javax.swing.JLabel" name="ventasTxt">
           <Properties>
             <Property name="text" type="java.lang.String" value="Ventas"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel7">
+        <Component class="javax.swing.JLabel" name="devolucionesTxt">
           <Properties>
             <Property name="text" type="java.lang.String" value="Devoluciones"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel8">
+        <Component class="javax.swing.JLabel" name="registroTxt">
           <Properties>
             <Property name="text" type="java.lang.String" value="Registro de Clientes y Compras"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel9">
+        <Component class="javax.swing.JLabel" name="edicionTxt">
           <Properties>
             <Property name="text" type="java.lang.String" value="Edicion de Productos y Marcas"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel10">
+        <Component class="javax.swing.JLabel" name="reportesTxt">
           <Properties>
             <Property name="text" type="java.lang.String" value="Reportes de Ventas y Existencias"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel11">
+        <Component class="javax.swing.JLabel" name="seccionTxt">
           <Properties>
             <Property name="text" type="java.lang.String" value="Seccion de Promociones y Ofertas"/>
           </Properties>
