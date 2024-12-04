@@ -46,7 +46,7 @@ public class Usuarios extends javax.swing.JPanel {
 
         usuarioPanel.setBackground(new java.awt.Color(255, 255, 255));
 
-        tituloTxt.setText("Clientes");
+        tituloTxt.setText("Usuarios");
 
         buscar.setForeground(new java.awt.Color(204, 204, 204));
         buscar.setToolTipText("");

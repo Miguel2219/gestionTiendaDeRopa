@@ -4,6 +4,8 @@
  */
 package com.mycompany.views;
 
+import com.mycompany.interfaces.DAOUsuarios;
+import com.mycompany.mavac_proyect.DAOUsuariosImpl;
 import com.mycompany.views.*;
 import java.awt.Color;
 
@@ -97,6 +99,11 @@ public class nuevoUsuario extends javax.swing.JPanel {
         btn_registrar.setText("Registrar");
         btn_registrar.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(102, 102, 102)));
         btn_registrar.setBorderPainted(false);
+        btn_registrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_registrarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout nuevoUsuarioPanelLayout = new javax.swing.GroupLayout(nuevoUsuarioPanel);
         nuevoUsuarioPanel.setLayout(nuevoUsuarioPanelLayout);
@@ -215,6 +222,25 @@ public class nuevoUsuario extends javax.swing.JPanel {
     private void identificacionTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_identificacionTxtActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_identificacionTxtActionPerformed
+
+    private void btn_registrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_registrarActionPerformed
+        com.mycompany.models.Usuarios usuario= new com.mycompany.models.Usuarios();
+        usuario.setNombre("Valentina");
+        usuario.setApellido_p("Coronel");
+        usuario.setApellido_m("Avendaño");
+        usuario.setIdentificacion(1092177737);
+        usuario.setDireccion("Calle 9 #11-31");
+        usuario.setResidencia("Ocaña");
+        usuario.setTelefono("3138587389");
+        
+        try{
+            DAOUsuarios dao=new DAOUsuariosImpl();
+            dao.registrar(usuario);
+            
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+    }//GEN-LAST:event_btn_registrarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -13,18 +13,20 @@ import java.util.logging.Logger;
 
 public class Database {
     protected Connection conexion;
-    private final String JDBC_DRIVER="com.mysql.jdbc.Driver";
+    private final String JDBC_DRIVER="com.mysql.cj.jdbc.Driver";
     private final String DB_URL="jdbc:mysql://localhost:3306/baseDeDatos";
     
-    private final String USER="Miguel";
-    private final String PASS="05544";
+    private final String USER="root";
+    private final String PASS="Gp999999";
     
-    public void Conectar() throws ClassNotFoundException{
+    public void Conectar() throws ClassNotFoundException, SQLException{
         try {
-            conexion=DriverManager.getConnection(DB_URL,USER,PASS);
             Class.forName(JDBC_DRIVER);
+            conexion=DriverManager.getConnection(DB_URL,USER,PASS);
+            
         } catch (SQLException ex) {
-            Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
+            System.err.println("Error de conexion: "+ex.getMessage());
+            throw ex;
         }
      
     }

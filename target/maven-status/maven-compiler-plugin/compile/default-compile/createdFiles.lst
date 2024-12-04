@@ -1,11 +1,16 @@
 com\mycompany\mavac_proyect\mavac.class
 com\mycompany\views\Usuarios$5.class
+com\mycompany\models\Compras.class
 com\mycompany\views\Reportes.class
 com\mycompany\mavac_proyect\mavac$6.class
+com\mycompany\models\Productos.class
 com\mycompany\views\Productos$4.class
+com\mycompany\interfaces\DAOProductos.class
 com\mycompany\views\Compras$2.class
 com\mycompany\views\nuevoUsuario$3.class
+com\mycompany\mavac_proyect\DAOUsuariosImpl.class
 com\mycompany\mavac_proyect\mavac$3.class
+com\mycompany\models\Usuarios.class
 com\mycompany\views\nuevoProducto$2.class
 com\mycompany\mavac_proyect\mavac$7.class
 com\mycompany\views\Compras$3.class
@@ -16,6 +21,7 @@ com\mycompany\views\Usuarios$2.class
 com\mycompany\views\Productos$3.class
 com\mycompany\views\Usuarios.class
 com\mycompany\views\Productos$6.class
+com\mycompany\interfaces\DAOUsuarios.class
 com\mycompany\views\Compras$4.class
 com\mycompany\views\nuevoProducto$1.class
 com\mycompany\views\Devoluciones$1.class
@@ -26,12 +32,14 @@ com\mycompany\mavac_proyect\mavac$1.class
 com\mycompany\views\Compras.class
 com\mycompany\views\nuevoProducto$4.class
 com\mycompany\mavac_proyect\mavac$5.class
+com\mycompany\views\nuevoUsuario$5.class
 com\mycompany\views\Reportes$2.class
 com\mycompany\views\Usuarios$3.class
 com\mycompany\views\Productos$2.class
 com\mycompany\views\Productos$5.class
 com\mycompany\mavac_proyect\mavac$2.class
 com\mycompany\views\Devoluciones$2.class
+com\mycompany\interfaces\DAOCompras.class
 com\mycompany\views\nuevoProducto.class
 com\mycompany\views\Usuarios$1.class
 com\mycompany\views\Productos$1.class
@@ -39,6 +47,7 @@ com\mycompany\views\Devoluciones.class
 com\mycompany\views\nuevoProducto$3.class
 com\mycompany\views\nuevoUsuario.class
 com\mycompany\views\Reportes$1.class
+com\mycompany\db\Database.class
 com\mycompany\views\Compras$1.class
 com\mycompany\views\nuevoUsuario$4.class
 com\mycompany\views\Usuarios$4.class
