@@ -57,6 +57,13 @@ public class mavac extends javax.swing.JFrame {
         dateTxt.setForeground(Color.black);
         appName.putClientProperty("FlatLaf.style", "font: bold $h1.regular.font");
         appName.setForeground(Color.white);
+        btn_compras.setForeground(Color.black);
+        btn_devoluciones.setForeground(Color.black);
+        btn_principal.setForeground(Color.black);
+        btn_productos.setForeground(Color.black);
+        btn_reportes.setForeground(Color.black);
+        btn_usuarios.setForeground(Color.black);
+        
     }
     private void SetDate() {
         LocalDate now = LocalDate.now();
@@ -106,7 +113,6 @@ public class mavac extends javax.swing.JFrame {
         btn_reportes.setBorder(new javax.swing.border.MatteBorder(null));
         btn_reportes.setBorderPainted(false);
         btn_reportes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btn_reportes.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btn_reportes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_reportesActionPerformed(evt);
@@ -114,12 +120,10 @@ public class mavac extends javax.swing.JFrame {
         });
 
         btn_principal.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
-        btn_principal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/home-outline.png"))); // NOI18N
         btn_principal.setText("Principal");
         btn_principal.setBorder(new javax.swing.border.MatteBorder(null));
         btn_principal.setBorderPainted(false);
         btn_principal.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btn_principal.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btn_principal.setIconTextGap(10);
         btn_principal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -132,7 +136,6 @@ public class mavac extends javax.swing.JFrame {
         btn_devoluciones.setBorder(new javax.swing.border.MatteBorder(null));
         btn_devoluciones.setBorderPainted(false);
         btn_devoluciones.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btn_devoluciones.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btn_devoluciones.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_devolucionesActionPerformed(evt);
@@ -140,12 +143,10 @@ public class mavac extends javax.swing.JFrame {
         });
 
         btn_usuarios.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
-        btn_usuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/account-multiple.png"))); // NOI18N
         btn_usuarios.setText("Usuarios");
         btn_usuarios.setBorder(new javax.swing.border.MatteBorder(null));
         btn_usuarios.setBorderPainted(false);
         btn_usuarios.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btn_usuarios.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btn_usuarios.setIconTextGap(10);
         btn_usuarios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -158,7 +159,6 @@ public class mavac extends javax.swing.JFrame {
         btn_productos.setBorder(new javax.swing.border.MatteBorder(null));
         btn_productos.setBorderPainted(false);
         btn_productos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btn_productos.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btn_productos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_productosActionPerformed(evt);
@@ -170,7 +170,6 @@ public class mavac extends javax.swing.JFrame {
         btn_compras.setBorder(new javax.swing.border.MatteBorder(null));
         btn_compras.setBorderPainted(false);
         btn_compras.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btn_compras.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btn_compras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_comprasActionPerformed(evt);
@@ -234,11 +233,11 @@ public class mavac extends javax.swing.JFrame {
         headerLayout.setVerticalGroup(
             headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(headerLayout.createSequentialGroup()
-                .addGap(45, 45, 45)
+                .addGap(37, 37, 37)
                 .addComponent(navTxt)
-                .addGap(35, 35, 35)
+                .addGap(26, 26, 26)
                 .addComponent(dateTxt)
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap(39, Short.MAX_VALUE))
         );
 
         content.setBackground(new java.awt.Color(255, 255, 255));
@@ -358,6 +357,11 @@ public class mavac extends javax.swing.JFrame {
                 new mavac().setVisible(true);
             }
         });
+        try {
+            UIManager.setLookAndFeel(new FlatMaterialLighterIJTheme());
+        } catch (Exception ex) {
+             ex.printStackTrace();
+            }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

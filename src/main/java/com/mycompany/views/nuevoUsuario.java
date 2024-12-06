@@ -8,6 +8,7 @@ import com.mycompany.interfaces.DAOUsuarios;
 import com.mycompany.mavac_proyect.DAOUsuariosImpl;
 import com.mycompany.views.*;
 import java.awt.Color;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -24,6 +25,18 @@ public class nuevoUsuario extends javax.swing.JPanel {
 
     }
     boolean isEdition=false;
+    private void limpiarCampos() {
+        nombreTxt.setText("");
+        apellidoPTxt.setText("");
+        apellidoMTxt.setText("");
+        identificacionTxt.setText("");
+        residenciaTxt.setText("");
+        direccionTxt.setText("");
+        telefonoTxt.setText("");
+
+        nombreTxt.requestFocus();
+    }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -96,6 +109,8 @@ public class nuevoUsuario extends javax.swing.JPanel {
 
         telefono.setText("Telefono");
 
+        btn_registrar.setBackground(new java.awt.Color(102, 102, 102));
+        btn_registrar.setForeground(new java.awt.Color(255, 255, 255));
         btn_registrar.setText("Registrar");
         btn_registrar.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(102, 102, 102)));
         btn_registrar.setBorderPainted(false);
@@ -113,85 +128,78 @@ public class nuevoUsuario extends javax.swing.JPanel {
                 .addGap(37, 37, 37)
                 .addGroup(nuevoUsuarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(nuevoUsuarioPanelLayout.createSequentialGroup()
-                        .addComponent(nombre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(nombre, javax.swing.GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE)
                         .addGap(204, 204, 204))
                     .addGroup(nuevoUsuarioPanelLayout.createSequentialGroup()
-                        .addComponent(identificacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(identificacion, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
                         .addGap(176, 176, 176))
-                    .addComponent(identificacionTxt)
+                    .addComponent(identificacionTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 277, Short.MAX_VALUE)
                     .addGroup(nuevoUsuarioPanelLayout.createSequentialGroup()
-                        .addComponent(apellidoM, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(apellidoM, javax.swing.GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE)
                         .addGap(156, 156, 156))
                     .addComponent(apellidoMTxt)
                     .addGroup(nuevoUsuarioPanelLayout.createSequentialGroup()
-                        .addComponent(apellidoP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(apellidoP, javax.swing.GroupLayout.DEFAULT_SIZE, 117, Short.MAX_VALUE)
                         .addGap(160, 160, 160))
                     .addComponent(apellidoPTxt)
                     .addGroup(nuevoUsuarioPanelLayout.createSequentialGroup()
                         .addComponent(Titulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(124, 124, 124))
                     .addComponent(nombreTxt))
-                .addGap(132, 132, 132)
                 .addGroup(nuevoUsuarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(nuevoUsuarioPanelLayout.createSequentialGroup()
-                        .addGroup(nuevoUsuarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(nuevoUsuarioPanelLayout.createSequentialGroup()
-                                .addComponent(residencia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(227, 227, 227))
-                            .addGroup(nuevoUsuarioPanelLayout.createSequentialGroup()
-                                .addComponent(direccion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(233, 233, 233))
-                            .addGroup(nuevoUsuarioPanelLayout.createSequentialGroup()
-                                .addComponent(telefono, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(237, 237, 237))
-                            .addComponent(residenciaTxt)
-                            .addComponent(direccionTxt)
-                            .addComponent(telefonoTxt))
-                        .addGap(44, 44, 44))
+                        .addGap(172, 172, 172)
+                        .addComponent(btn_registrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(57, 57, 57))
                     .addGroup(nuevoUsuarioPanelLayout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addComponent(btn_registrar, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(53, 53, 53)
+                        .addGroup(nuevoUsuarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(residencia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(residenciaTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(direccion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(direccionTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(telefono, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(telefonoTxt))
+                        .addContainerGap())))
         );
         nuevoUsuarioPanelLayout.setVerticalGroup(
             nuevoUsuarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(nuevoUsuarioPanelLayout.createSequentialGroup()
                 .addGap(16, 16, 16)
-                .addComponent(Titulo)
+                .addComponent(Titulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(26, 26, 26)
                 .addGroup(nuevoUsuarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nombre)
-                    .addComponent(residencia))
+                    .addComponent(nombre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(residencia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(nuevoUsuarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(residenciaTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
-                    .addComponent(nombreTxt))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(nuevoUsuarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(nuevoUsuarioPanelLayout.createSequentialGroup()
-                        .addComponent(apellidoP)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(apellidoPTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(nuevoUsuarioPanelLayout.createSequentialGroup()
-                        .addComponent(direccion)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(direccionTxt)))
-                .addGap(18, 18, 18)
                 .addGroup(nuevoUsuarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(nuevoUsuarioPanelLayout.createSequentialGroup()
-                        .addComponent(apellidoM)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(apellidoMTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(nuevoUsuarioPanelLayout.createSequentialGroup()
-                        .addComponent(telefono)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(telefonoTxt)))
+                    .addComponent(nombreTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
+                    .addComponent(residenciaTxt))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(nuevoUsuarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(apellidoP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(direccion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(nuevoUsuarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(direccionTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+                    .addComponent(apellidoPTxt))
                 .addGap(18, 18, 18)
-                .addComponent(identificacion)
+                .addGroup(nuevoUsuarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(apellidoM, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(telefono, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(nuevoUsuarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(identificacionTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_registrar, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(nuevoUsuarioPanelLayout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addComponent(apellidoMTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE))
+                    .addComponent(telefonoTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(identificacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(nuevoUsuarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addGroup(nuevoUsuarioPanelLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(identificacionTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE))
+                    .addComponent(btn_registrar, javax.swing.GroupLayout.DEFAULT_SIZE, 52, Short.MAX_VALUE))
                 .addGap(89, 89, 89))
         );
 
@@ -199,11 +207,11 @@ public class nuevoUsuario extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(nuevoUsuarioPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(nuevoUsuarioPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(nuevoUsuarioPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(nuevoUsuarioPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -224,22 +232,107 @@ public class nuevoUsuario extends javax.swing.JPanel {
     }//GEN-LAST:event_identificacionTxtActionPerformed
 
     private void btn_registrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_registrarActionPerformed
-        com.mycompany.models.Usuarios usuario= new com.mycompany.models.Usuarios();
-        usuario.setNombre("Valentina");
-        usuario.setApellido_p("Coronel");
-        usuario.setApellido_m("Avendaño");
-        usuario.setIdentificacion(1092177737);
-        usuario.setDireccion("Calle 9 #11-31");
-        usuario.setResidencia("Ocaña");
-        usuario.setTelefono("3138587389");
-        
-        try{
-            DAOUsuarios dao=new DAOUsuariosImpl();
-            dao.registrar(usuario);
-            
-        }catch (Exception e){
-            System.out.println(e.getMessage());
+        String nombre = nombreTxt.getText().trim();
+        String apellidoP = apellidoPTxt.getText().trim();
+        String apellidoM = apellidoMTxt.getText().trim();
+        String identificacionStr = identificacionTxt.getText().trim();
+        String residencia = residenciaTxt.getText().trim();
+        String direccion = direccionTxt.getText().trim();
+        String telefono = telefonoTxt.getText().trim();
+
+
+        if (nombre.isEmpty() || apellidoP.isEmpty() || apellidoM.isEmpty() || 
+            identificacionStr.isEmpty() || residencia.isEmpty() || 
+            direccion.isEmpty() || telefono.isEmpty()) {
+    
+            javax.swing.JOptionPane.showMessageDialog(this, 
+            "Debe llenar todos los campos", 
+            "AVISO", 
+            javax.swing.JOptionPane.ERROR_MESSAGE);
+    
+            nombreTxt.requestFocus();
+            return;
         }
+
+        // Validar identificación como número
+        int identificacion;
+        try {
+            identificacion = Integer.parseInt(identificacionStr);
+    
+            // Validaciones adicionales
+            if (identificacion <= 0) {
+                javax.swing.JOptionPane.showMessageDialog(this, 
+                    "La identificación debe ser un número positivo", 
+                    "ERROR", 
+                javax.swing.JOptionPane.ERROR_MESSAGE);
+                identificacionTxt.requestFocus();
+                return;
+            }
+        } catch (NumberFormatException e) {
+            javax.swing.JOptionPane.showMessageDialog(this, 
+                "La identificación debe ser un número válido", 
+                "ERROR", 
+                javax.swing.JOptionPane.ERROR_MESSAGE);
+            identificacionTxt.requestFocus();
+            return;
+        }
+
+// Validar longitud de campos
+        if (nombre.length() < 2 || apellidoP.length() < 2 || apellidoM.length() < 2) {
+            javax.swing.JOptionPane.showMessageDialog(this, 
+                "Nombres y apellidos deben tener al menos 2 caracteres", 
+                "ERROR", 
+                javax.swing.JOptionPane.ERROR_MESSAGE);
+            nombreTxt.requestFocus();
+            return;
+        }
+
+// Validar formato de teléfono (ejemplo: solo números y 10 dígitos)
+        if (!telefono.matches("\\d{10}")) {
+            javax.swing.JOptionPane.showMessageDialog(this, 
+                "El teléfono debe tener 10 dígitos", 
+                "ERROR", 
+                javax.swing.JOptionPane.ERROR_MESSAGE);
+            telefonoTxt.requestFocus();
+            return;
+        }
+
+// Crear y registrar usuario
+        com.mycompany.models.Usuarios usuario = new com.mycompany.models.Usuarios();
+        usuario.setNombre(nombre);
+        usuario.setApellido_p(apellidoP);
+        usuario.setApellido_m(apellidoM);
+        usuario.setIdentificacion(identificacion);
+        usuario.setDireccion(direccion);
+        usuario.setResidencia(residencia);
+        usuario.setTelefono(telefono);
+
+        try {
+            DAOUsuarios dao = new DAOUsuariosImpl();
+            dao.registrar(usuario);
+    
+
+            javax.swing.JOptionPane.showMessageDialog(this, 
+                "Usuario registrado exitosamente", 
+                "ÉXITO", 
+                javax.swing.JOptionPane.INFORMATION_MESSAGE);
+    
+
+            limpiarCampos();
+    
+        } catch (Exception e) {
+
+            javax.swing.JOptionPane.showMessageDialog(this, 
+                "Error al registrar usuario: " + e.getMessage(), 
+                "ERROR", 
+                javax.swing.JOptionPane.ERROR_MESSAGE);
+    
+
+            System.err.println("Error de registro: " + e.getMessage());
+        }
+
+
+      
     }//GEN-LAST:event_btn_registrarActionPerformed
 
 
@@ -271,10 +364,13 @@ public class nuevoUsuario extends javax.swing.JPanel {
         apellidoMTxt.putClientProperty("JTextField.placeholderText", "Ingrese el apellido materno del usuario.");
         residenciaTxt.putClientProperty("JTextField.placeholderText", "Ingrese la residencia del usuario.");
         telefonoTxt.putClientProperty("JTextField.placeholderText", "Ingrese el teléfono del usuario.");
+        identificacionTxt.putClientProperty("JTextField.placeholderText","Ingrese la identificacion del usuario");
+        direccionTxt.putClientProperty("JTextField.placeholderText", "Ingrese la direccion del usuario");
       
         
 
         
     
     }
+
 }

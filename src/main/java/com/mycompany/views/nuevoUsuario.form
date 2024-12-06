@@ -21,12 +21,12 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="nuevoUsuarioPanel" alignment="0" max="32767" attributes="0"/>
+          <Component id="nuevoUsuarioPanel" alignment="0" min="-2" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="nuevoUsuarioPanel" alignment="0" max="32767" attributes="0"/>
+          <Component id="nuevoUsuarioPanel" alignment="0" min="-2" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -45,21 +45,21 @@
                   <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="nombre" max="32767" attributes="0"/>
+                          <Component id="nombre" pref="73" max="32767" attributes="0"/>
                           <EmptySpace min="204" pref="204" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="identificacion" max="32767" attributes="0"/>
+                          <Component id="identificacion" pref="101" max="32767" attributes="0"/>
                           <EmptySpace min="176" pref="176" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="identificacionTxt" alignment="0" max="32767" attributes="0"/>
+                      <Component id="identificacionTxt" alignment="0" pref="277" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="apellidoM" max="32767" attributes="0"/>
+                          <Component id="apellidoM" pref="121" max="32767" attributes="0"/>
                           <EmptySpace min="156" pref="156" max="-2" attributes="0"/>
                       </Group>
                       <Component id="apellidoMTxt" alignment="0" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="apellidoP" max="32767" attributes="0"/>
+                          <Component id="apellidoP" pref="117" max="32767" attributes="0"/>
                           <EmptySpace min="160" pref="160" max="-2" attributes="0"/>
                       </Group>
                       <Component id="apellidoPTxt" alignment="0" max="32767" attributes="0"/>
@@ -69,32 +69,23 @@
                       </Group>
                       <Component id="nombreTxt" alignment="0" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="132" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="residencia" max="32767" attributes="0"/>
-                                  <EmptySpace min="227" pref="227" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="direccion" max="32767" attributes="0"/>
-                                  <EmptySpace min="233" pref="233" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="telefono" max="32767" attributes="0"/>
-                                  <EmptySpace min="237" pref="237" max="-2" attributes="0"/>
-                              </Group>
-                              <Component id="residenciaTxt" max="32767" attributes="0"/>
-                              <Component id="direccionTxt" max="32767" attributes="0"/>
-                              <Component id="telefonoTxt" max="32767" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="172" max="-2" attributes="0"/>
+                          <Component id="btn_registrar" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                          <Component id="btn_registrar" min="-2" pref="203" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="residencia" max="32767" attributes="0"/>
+                              <Component id="residenciaTxt" min="-2" pref="373" max="-2" attributes="0"/>
+                              <Component id="direccion" alignment="0" max="32767" attributes="0"/>
+                              <Component id="direccionTxt" alignment="0" min="-2" pref="373" max="-2" attributes="0"/>
+                              <Component id="telefono" alignment="0" max="32767" attributes="0"/>
+                              <Component id="telefonoTxt" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -104,49 +95,48 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-                  <Component id="Titulo" min="-2" max="-2" attributes="0"/>
+                  <Component id="Titulo" max="32767" attributes="0"/>
                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="nombre" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="residencia" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="nombre" alignment="3" max="32767" attributes="0"/>
+                      <Component id="residencia" alignment="3" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="residenciaTxt" pref="34" max="32767" attributes="0"/>
-                      <Component id="nombreTxt" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="nombreTxt" pref="36" max="32767" attributes="0"/>
+                      <Component id="residenciaTxt" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Component id="apellidoP" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="apellidoPTxt" min="-2" pref="34" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Component id="direccion" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="direccionTxt" max="32767" attributes="0"/>
-                      </Group>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="apellidoP" alignment="3" max="32767" attributes="0"/>
+                      <Component id="direccion" alignment="3" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Component id="apellidoM" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" max="-2" attributes="0"/>
-                          <Component id="apellidoMTxt" min="-2" pref="34" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Component id="telefono" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="telefonoTxt" max="32767" attributes="0"/>
-                      </Group>
+                      <Component id="direccionTxt" pref="34" max="32767" attributes="0"/>
+                      <Component id="apellidoPTxt" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
-                  <Component id="identificacion" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="apellidoM" alignment="3" max="32767" attributes="0"/>
+                      <Component id="telefono" alignment="3" max="32767" attributes="0"/>
+                  </Group>
                   <EmptySpace min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="identificacionTxt" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                      <Component id="btn_registrar" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                      <Group type="102" alignment="3" attributes="0">
+                          <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
+                          <Component id="apellidoMTxt" pref="34" max="32767" attributes="0"/>
+                      </Group>
+                      <Component id="telefonoTxt" alignment="3" pref="35" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                  <Component id="identificacion" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Group type="102" alignment="3" attributes="0">
+                          <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+                          <Component id="identificacionTxt" pref="34" max="32767" attributes="0"/>
+                      </Group>
+                      <Component id="btn_registrar" alignment="3" pref="52" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="89" max="-2" attributes="0"/>
               </Group>
@@ -222,6 +212,12 @@
         </Component>
         <Component class="javax.swing.JButton" name="btn_registrar">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="66" red="66" type="rgb"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Registrar"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">

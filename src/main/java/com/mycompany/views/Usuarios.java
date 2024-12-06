@@ -4,9 +4,13 @@
  */
 package com.mycompany.views;
 
+import com.mycompany.interfaces.DAOUsuarios;
+import com.mycompany.mavac_proyect.DAOUsuariosImpl;
 import com.mycompany.views.*;
 import com.mycompany.mavac_proyect.mavac;
 import java.awt.Color;
+import java.util.List;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -19,7 +23,17 @@ public class Usuarios extends javax.swing.JPanel {
      */
     public Usuarios() {
         initComponents();
+        loadUsers();
         
+    }
+    private void loadUsers() {
+        try{
+            DAOUsuarios dao = new DAOUsuariosImpl();
+            DefaultTableModel model=(DefaultTableModel) jTable1.getModel();
+            dao.listar().forEach((u)->model.addRow(new Object[]{u.getNombre(),u.getApellido_p(),u.getApellido_m(),u.getIdentificacion(),u.getResidencia(),u.getDireccion(),u.getTelefono()}));
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
     }
     
     
@@ -56,7 +70,10 @@ public class Usuarios extends javax.swing.JPanel {
             }
         });
 
+        btn_buscar.setBackground(new java.awt.Color(102, 102, 102));
+        btn_buscar.setForeground(new java.awt.Color(255, 255, 255));
         btn_buscar.setText("Buscar");
+        btn_buscar.setBorderPainted(false);
         btn_buscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_buscarActionPerformed(evt);
@@ -88,6 +105,8 @@ public class Usuarios extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(jTable1);
 
+        btn_nuevoUsuario.setBackground(new java.awt.Color(102, 102, 102));
+        btn_nuevoUsuario.setForeground(new java.awt.Color(255, 255, 255));
         btn_nuevoUsuario.setText("Nuevo Usuario");
         btn_nuevoUsuario.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(102, 102, 102)));
         btn_nuevoUsuario.setBorderPainted(false);
@@ -97,6 +116,8 @@ public class Usuarios extends javax.swing.JPanel {
             }
         });
 
+        btn_editar.setBackground(new java.awt.Color(102, 102, 102));
+        btn_editar.setForeground(new java.awt.Color(255, 255, 255));
         btn_editar.setText("Editar");
         btn_editar.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(102, 102, 102)));
         btn_editar.setBorderPainted(false);
@@ -106,6 +127,8 @@ public class Usuarios extends javax.swing.JPanel {
             }
         });
 
+        btn_borrar.setBackground(new java.awt.Color(102, 102, 102));
+        btn_borrar.setForeground(new java.awt.Color(255, 255, 255));
         btn_borrar.setText("Borrar");
         btn_borrar.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(102, 102, 102)));
         btn_borrar.setBorderPainted(false);
@@ -120,46 +143,40 @@ public class Usuarios extends javax.swing.JPanel {
         usuarioPanelLayout.setHorizontalGroup(
             usuarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(usuarioPanelLayout.createSequentialGroup()
-                .addGroup(usuarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(usuarioPanelLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btn_nuevoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(48, 48, 48)
-                        .addComponent(btn_editar, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(49, 49, 49)
-                        .addComponent(btn_borrar, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, usuarioPanelLayout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addGroup(usuarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(usuarioPanelLayout.createSequentialGroup()
-                                .addComponent(buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 561, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(btn_buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(tituloTxt)
-                            .addComponent(jScrollPane1))))
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addGap(33, 33, 33)
+                .addComponent(tituloTxt))
+            .addGroup(usuarioPanelLayout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addComponent(buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 561, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btn_buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(usuarioPanelLayout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(usuarioPanelLayout.createSequentialGroup()
+                .addGap(350, 350, 350)
+                .addComponent(btn_nuevoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(38, 38, 38)
+                .addComponent(btn_editar, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(36, 36, 36)
+                .addComponent(btn_borrar, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         usuarioPanelLayout.setVerticalGroup(
             usuarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(usuarioPanelLayout.createSequentialGroup()
                 .addGap(17, 17, 17)
                 .addComponent(tituloTxt)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(usuarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGap(6, 6, 6)
+                .addGroup(usuarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn_buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(5, 5, 5)
                 .addGroup(usuarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(usuarioPanelLayout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addGroup(usuarioPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btn_nuevoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btn_editar, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(usuarioPanelLayout.createSequentialGroup()
-                        .addGap(11, 11, 11)
-                        .addComponent(btn_borrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap())
+                    .addComponent(btn_nuevoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_editar, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_borrar, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -187,7 +204,7 @@ public class Usuarios extends javax.swing.JPanel {
     }//GEN-LAST:event_btn_nuevoUsuarioActionPerformed
 
     private void btn_editarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_editarActionPerformed
-        // TODO add your handling code here:
+        mavac.ShowJPanel(new nuevoUsuario());
     }//GEN-LAST:event_btn_editarActionPerformed
 
     private void btn_borrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_borrarActionPerformed
